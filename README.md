@@ -6,5 +6,6 @@ My personal configuration files
 
 ```
 $ git clone git@github.com:markgaze/dotfiles.git
+$ cd dotfiles
 $ make
 ```
