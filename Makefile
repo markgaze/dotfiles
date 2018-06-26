@@ -29,11 +29,12 @@ setup-git-config:
 ifeq ("$(wildcard $(HOME)/.gitconfig.local)","")
 	cp .gitconfig.local $(HOME)/.gitconfig.local
 	@echo "Enter your full name";
-	@read -e name; \
-	sed -i '' "s/GITNAME/$$name/" $(HOME)/.gitconfig.local
+	@read name; \
+	sed -i.orig "s/GITNAME/$$name/" $(HOME)/.gitconfig.local
 	@echo "Enter your email address";
-	@read -e email; \
-	sed -i '' "s/GITEMAIL/$$email/g" $(HOME)/.gitconfig.local
+	@read email; \
+	sed -i.orig.1 "s/GITEMAIL/$$email/g" $(HOME)/.gitconfig.local
+	rm -f .gitconfig.local.orig*
 endif
 
 .PHONY: test

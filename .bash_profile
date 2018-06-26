@@ -1,10 +1,17 @@
 #!/bin/bash
 
 # Bash scripts to load
-if [ -f /usr/local/etc/bash_completion ]; then
-	# shellcheck disable=SC1091
-    source /usr/local/etc/bash_completion
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    # shellcheck disable=SC1091
+    source /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    # shellcheck disable=SC1091
+    source /etc/bash_completion
+  fi
 fi
+
+
 
 for file in ~/.{bash_aliases,bash_prompt,exports}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then

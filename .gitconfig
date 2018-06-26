@@ -1,10 +1,13 @@
+[include]
+  path = ~/.gitconfig.local
 [alias]
   co = checkout
   f = fetch -p
   ec = config --global -e
   up = !git pull --rebase origin master
   cob = checkout -b
-  cm = !git add -A && git commit -m        save = !git add -A && git commit -m 'SAVEPOINT'
+  cm = !git add -A && git commit -m        
+  save = !git add -A && git commit -m 'SAVEPOINT'
   wip = !git add -u && git commit -m "WIP"
   undo = reset HEAD~1 --mixed
   amend = commit -a --amend
