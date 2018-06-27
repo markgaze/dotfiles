@@ -1,11 +1,22 @@
 #!/bin/bash
+colorflag="--color"
 
 # Filesystem
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ls='ls -lh'
-alias la='ls -lah'
+
+# List all files colorized in long format
+# shellcheck disable=SC2139
+alias ls="ls -lF ${colorflag}"
+
+# List all files colorized in long format, including dot files
+# shellcheck disable=SC2139
+alias la="ls -laF ${colorflag}"
+
+# List only directories
+# shellcheck disable=SC2139
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
 # Grep colourisation
 alias grep='grep --color'
