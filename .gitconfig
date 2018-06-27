@@ -17,3 +17,10 @@
   migrate = "!f(){ CURRENT=$(git symbolic-ref --short HEAD); git checkout -b $1 && git branch --force $CURRENT ${3-'$CURRENT@{u}'} && git rebase --onto ${2-master} $CURRENT; }; f"
   open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
   browse = !git open
+  # from jessfraz https://github.com/jessfraz/dotfiles/blob/master/.gitconfig
+  branches = branch -a
+  s = status -s
+  p = !"git pull; git submodule foreach git pull origin master"
+  c = clone --recursive
+  alias=!git config -l | grep ^alias | cut -c 7- | sort
+  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
