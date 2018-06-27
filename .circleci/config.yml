@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: tyzhnenko/shellcheck
+      - image: markgaze/shellcheck
     steps:
       - checkout
       - run:
