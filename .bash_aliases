@@ -41,3 +41,6 @@ alias vprune='vagrant box prune'
 # Git
 alias git-top='git rev-parse --show-toplevel'
 alias gfo='git f origin'
+
+# Fake Explorer command
+alias explorer="xdg-open . & sleep 1"
