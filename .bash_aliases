@@ -44,3 +44,7 @@ alias gfo='git f origin'
 
 # Fake Explorer command
 alias explorer="xdg-open . & sleep 1"
+
+# Use vtop instead of top
+alias top="vtop"
+alias vtop="vtop --theme brew"
