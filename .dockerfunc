@@ -4,6 +4,7 @@ vscode(){
 	sudo docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+    -v ~/git:/home/user/git \
 		-e "DISPLAY=unix${DISPLAY}" \
 		--device /dev/dri \
 		--name vscode \
@@ -16,6 +17,7 @@ vscode-dotnet(){
 	sudo docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+    -v ~/git:/home/user/git \
 		-e "DISPLAY=unix${DISPLAY}" \
 		--device /dev/dri \
 		--name vscode-dotnet \
@@ -28,6 +30,7 @@ vscode-react(){
 	sudo docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+    -v ~/git:/home/user/git \
 		-e "DISPLAY=unix${DISPLAY}" \
 		--device /dev/dri \
 		--name vscode-react \
@@ -40,8 +43,22 @@ vscode-go(){
 	sudo docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+    -v ~/git:/home/user/git \
 		-e "DISPLAY=unix${DISPLAY}" \
 		--device /dev/dri \
 		--name vscode-go \
 		markgaze/vscode:go
+}
+
+vscode-go-lambda(){
+	sudo docker rm -f vscode-go-lambda
+
+	sudo docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+    -v ~/git:/home/user/git \
+		-e "DISPLAY=unix${DISPLAY}" \
+		--device /dev/dri \
+		--name vscode-go-lambda \
+		markgaze/vscode:go-lambda
 }
