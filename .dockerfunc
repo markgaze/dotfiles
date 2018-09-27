@@ -1,0 +1,47 @@
+vscode(){
+	sudo docker rm -f vscode
+
+	sudo docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+		-e "DISPLAY=unix${DISPLAY}" \
+		--device /dev/dri \
+		--name vscode \
+		markgaze/vscode
+}
+
+vscode-dotnet(){
+	sudo docker rm -f vscode-dotnet
+
+	sudo docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+		-e "DISPLAY=unix${DISPLAY}" \
+		--device /dev/dri \
+		--name vscode-dotnet \
+		markgaze/vscode:dotnet
+}
+
+vscode-react(){
+	sudo docker rm -f vscode-react
+
+	sudo docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+		-e "DISPLAY=unix${DISPLAY}" \
+		--device /dev/dri \
+		--name vscode-react \
+		markgaze/vscode:react
+}
+
+vscode-go(){
+	sudo docker rm -f vscode-go
+
+	sudo docker run -d \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix  \
+		-e "DISPLAY=unix${DISPLAY}" \
+		--device /dev/dri \
+		--name vscode-go \
+		markgaze/vscode:go
+}
