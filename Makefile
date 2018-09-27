@@ -15,6 +15,7 @@ bashfiles:
 	.bash_prompt \
 	.exports \
 	.gitconfig \
+	.dockerfunc \
 	; \
 	do \
 		echo $$file; \
