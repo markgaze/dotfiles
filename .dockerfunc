@@ -2,6 +2,14 @@ docker-remove-images(){
 	sudo docker rmi $(sudo docker images -f dangling=true -q)
 }
 
+docker-stop-all(){
+	sudo docker rm -f $(sudo docker ps -aq)
+}
+
+docker-remove-all(){
+	sudo docker rm -f $(sudo docker ps -aq)
+}
+
 docker-update-all(){
 	sudo docker images | grep -v REPOSITORY | awk '{printf $1; printf ":"; print $2}' | xargs -L1 sudo docker pull
 }
