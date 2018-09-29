@@ -15,7 +15,7 @@ docker-update-all(){
 }
 
 azuredatastudio(){
-	sudo docker rm -f vscode
+	sudo docker rm -f azuredatastudio
 
 	sudo docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
@@ -27,7 +27,7 @@ azuredatastudio(){
 }
 
 sqlectron(){
-	sudo docker rm -f vscode
+	sudo docker rm -f sqlectron
 
 	sudo docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
