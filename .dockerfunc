@@ -1,15 +1,15 @@
 #!/bin/bash
 
 docker-remove-images(){
-	docker rmi "$(docker images -f dangling=true -q)"
+	"docker rmi $(docker images -f dangling=true -q)"
 }
 
 docker-stop-all(){
-	docker rm -f "$(docker ps -aq)"
+	"docker rm -f $(docker ps -aq)"
 }
 
 docker-remove-all(){
-	docker rm -f "$(docker ps -aq)"
+	"docker rm -f $(docker ps -aq)"
 }
 
 docker-update-all(){
