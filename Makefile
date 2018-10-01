@@ -40,4 +40,4 @@ endif
 
 .PHONY: test
 test:
-	shellcheck .bash_* .exports
+	shellcheck .bash_* .exports .dockerfunc
