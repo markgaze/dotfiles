@@ -1,27 +1,29 @@
+#!/bin/bash
+
 docker-remove-images(){
-	sudo docker rmi $(sudo docker images -f dangling=true -q)
+	docker rmi "$(docker images -f dangling=true -q)"
 }
 
 docker-stop-all(){
-	sudo docker rm -f $(sudo docker ps -aq)
+	docker rm -f "$(docker ps -aq)"
 }
 
 docker-remove-all(){
-	sudo docker rm -f $(sudo docker ps -aq)
+	docker rm -f "$(docker ps -aq)"
 }
 
 docker-update-all(){
-	sudo docker images | grep -v REPOSITORY | awk '{printf $1; printf ":"; print $2}' | xargs -L1 sudo docker pull
+	docker images | grep -v REPOSITORY | awk '{printf $1; printf ":"; print $2}' | xargs -L1 docker pull
 }
 
 get-container-ip(){
-	sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
+	docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }
 
 azuredatastudio(){
-	sudo docker rm -f azuredatastudio
+	docker rm -f azuredatastudio
 
-	sudo docker run -d \
+	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
 		-e "DISPLAY=unix${DISPLAY}" \
@@ -31,9 +33,9 @@ azuredatastudio(){
 }
 
 sqlectron(){
-	sudo docker rm -f sqlectron
+	docker rm -f sqlectron
 
-	sudo docker run -d \
+	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
 		-e "DISPLAY=unix${DISPLAY}" \
@@ -43,9 +45,9 @@ sqlectron(){
 }
 
 vscode(){
-	sudo docker rm -f vscode
+	docker rm -f vscode
 
-	sudo docker run -d \
+	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
     -v ~/git:/home/user/git \
@@ -56,9 +58,9 @@ vscode(){
 }
 
 vscode-dotnet(){
-	sudo docker rm -f vscode-dotnet
+	docker rm -f vscode-dotnet
 
-	sudo docker run -d \
+	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
     -v ~/git:/home/user/git \
@@ -69,9 +71,9 @@ vscode-dotnet(){
 }
 
 vscode-react(){
-	sudo docker rm -f vscode-react
+	docker rm -f vscode-react
 
-	sudo docker run -d \
+	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
     -v ~/git:/home/user/git \
@@ -82,9 +84,9 @@ vscode-react(){
 }
 
 vscode-go(){
-	sudo docker rm -f vscode-go
+	docker rm -f vscode-go
 
-	sudo docker run -d \
+	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
     -v ~/git:/home/user/git \
@@ -95,9 +97,9 @@ vscode-go(){
 }
 
 vscode-go-lambda(){
-	sudo docker rm -f vscode-go-lambda
+	docker rm -f vscode-go-lambda
 
-	sudo docker run -d \
+	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
     -v ~/git:/home/user/git \
