@@ -1,15 +1,18 @@
 #!/bin/bash
 
 docker-remove-images(){
-	"docker rmi $(docker images -f dangling=true -q)"
+	# shellcheck disable=SC2046
+	docker rmi $(docker images -f dangling=true -q)
 }
 
 docker-stop-all(){
-	"docker rm -f $(docker ps -aq)"
+	# shellcheck disable=SC2046
+	docker rm -f $(docker ps -aq)
 }
 
 docker-remove-all(){
-	"docker rm -f $(docker ps -aq)"
+	# shellcheck disable=SC2046
+	docker rm -f $(docker ps -aq)
 }
 
 docker-update-all(){
