@@ -49,8 +49,8 @@ franz(){
 		--shm-size 4g \
 		--device /dev/dri \
 		--device /dev/snd \
-		--group-add $(getent group audio | cut -d: -f3) \
-		--name franz
+		--group-add "$(getent group audio | cut -d: -f3)" \
+		--name franz \
 		markgaze/franz
 }
 
