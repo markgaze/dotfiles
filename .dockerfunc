@@ -52,7 +52,6 @@ franz(){
 		--group-add "$(getent group audio | cut -d: -f3)" \
 		--name franz \
 		markgaze/franz
-	fi
 }
 
 sqlectron(){
