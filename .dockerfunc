@@ -35,6 +35,17 @@ azuredatastudio(){
 		markgaze/azuredatastudio
 }
 
+donny(){
+	docker run \
+    --rm \
+    -t \
+    -eAZURE_DEVOPS_ACCOUNT \
+    -eAZURE_DEVOPS_PROJECT \
+    -eAZURE_DEVOPS_TEAM \
+    -eAZURE_DEVOPS_TOKEN \
+    benmatselby/donny "$@"
+}
+
 franz(){
 	docker rm -f franz
 
