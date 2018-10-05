@@ -32,7 +32,7 @@ alias guid='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 # IP addresses
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\\  -f2"
+alias localip="ifconfig | grep 'inet ' | grep 192.* | cut -d ':' -f 2 | cut -d ' ' -f 1"
 
 # Vagrant
 alias vssh='vagrant ssh'
