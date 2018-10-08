@@ -111,7 +111,7 @@ vscode-go(){
 	docker run -d \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix  \
-    -v ~/git:/home/user/git \
+    -v ~/git:/home/user/go/src/github.com \
 		-e "DISPLAY=unix${DISPLAY}" \
 		--device /dev/dri \
 		--name vscode-go \
