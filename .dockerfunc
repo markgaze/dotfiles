@@ -42,8 +42,7 @@ franz(){
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		-v /run/user/1000/pulse/native:/run/user/1000/pulse/native \
-		-v ~/.config/Franz:/home/user/.config/Franz \
-		-v ~/.config/pulse/cookie:/root/.config/pulse/cookie \
+		-v ~:/home/user \
 		-e "DISPLAY=unix${DISPLAY}" \
 		-e PULSE_SERVER=unix:/run/user/1000/pulse/native \
 		--shm-size 4g \
