@@ -48,3 +48,7 @@ alias explorer="xdg-open . & sleep 1"
 # Use vtop instead of top
 alias top="vtop"
 alias vtop="vtop --theme brew"
+
+# Quick folders
+alias work="cd ~/git/emisgroup"
+alias mine="cd ~/git/markgaze"
