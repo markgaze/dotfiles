@@ -17,6 +17,7 @@
   migrate = "!f(){ CURRENT=$(git symbolic-ref --short HEAD); git checkout -b $1 && git branch --force $CURRENT ${3-'$CURRENT@{u}'} && git rebase --onto ${2-master} $CURRENT; }; f"
   open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
   browse = !git open
+  pom = pull origin master
   # from jessfraz https://github.com/jessfraz/dotfiles/blob/master/.gitconfig
   branches = branch -a
   s = status -s
