@@ -25,6 +25,8 @@
   c = clone --recursive
   alias=!git config -l | grep ^alias | cut -c 7- | sort
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
+  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  # the below needs removing really, too easy to lose something!
   rhh = reset HEAD --hard
 [user]
 	email = mark.l.gaze@gmail.com
