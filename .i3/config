@@ -166,6 +166,9 @@ bar {
         tray_output primary
 }
 
+# assign workspaces
+assign [class="Franz"] 3
+assign [class="Google-chrome"] 1
 
 # auto run commands for wallpaper and monitors
 exec_always --no-startup-id feh --bg-fill ${HOME}/Pictures/wallpaper.png
