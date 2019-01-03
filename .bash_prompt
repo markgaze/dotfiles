@@ -59,6 +59,15 @@ prompt_git() {
 	fi;
 }
 
+last_command() {
+    success=$?
+    if [ ${success} -ne 0 ]; then
+        echo -e "${red}✗ "
+    else
+        echo -e "${green}✓ "
+    fi
+}
+
 cloud=""
 if [[ -f /proc/cpuinfo ]] && grep -q "^flags.* hypervisor" /proc/cpuinfo && [[ ! -d "/mnt/c/Windows/" ]]; then
 	cloud="☁️ "
@@ -114,6 +123,7 @@ fi;
 # Set the terminal title to the current working directory.
 PS1="\\[\\033]0;\\w\\007\\]";
 PS1+="\\[${bold}\\]\\n"; # newline
+PS1+='$(last_command)'
 PS1+="\\[${userStyle}\\]\\u"; # username
 PS1+="\\[${white}\\] at ";
 PS1+="\\[${hostStyle}\\]${cloud}\\h"; # host
