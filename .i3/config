@@ -98,11 +98,17 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# workspace names
+set $workspace1 "1: Chrome"
+set $workspace2 "2: Terminal"
+set $workspace3 "3: Franz"
+set $workspace4 "4: Code"
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -111,10 +117,10 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -191,9 +197,15 @@ bar {
 # thin borders
 hide_edge_borders both
 
+# workspace default monitors
+workspace $workspace1 output DP-2
+workspace $workspace2 output HDMI-1
+workspace $workspace3 output VGA-1
+workspace $workspace4 output HDMI-1
+
 # assign workspaces
-assign [class="Franz"] 3
-assign [class="Google-chrome"] 1
+assign [class="Google-chrome"] $workspace1
+assign [class="Franz"] $workspace3
 
 # auto run commands
 exec_always --no-startup-id feh --bg-fill ${HOME}/Pictures/wallpaper.png
