@@ -219,6 +219,7 @@ exec google-chrome
 # windows specific commands
 for_window [class="VirtualBox"] floating enable
 for_window [class="^.*"] border pixel 1
+for_window [class="Ulauncher"] border pixel 0
 
 # run the merge
 exec xrdb -merge $HOME/.Xresources
