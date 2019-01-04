@@ -134,9 +134,8 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 !! Control-Shift-C for copy
-URxvt.keysym.C-C: clipboard:copy
-URxvt.keysym.C-V: clipboard:paste
-URxvt.keysym.Control-v: clipboard:paste
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 !! get option over to work
 URxvt.keysym.M-Left:        \033[1;5D
