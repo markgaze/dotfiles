@@ -10,8 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term hyper
-set $menu i3-dmenu-desktop
+set $term urxvt
+set $menu ulauncher
 set $barcmd i3status
 set $lockcmd i3lock
 
@@ -170,9 +170,17 @@ bar {
 assign [class="Franz"] 3
 assign [class="Google-chrome"] 1
 
-# auto run commands for wallpaper and monitors
+# auto run commands
 exec_always --no-startup-id feh --bg-fill ${HOME}/Pictures/wallpaper.png
 exec_always xrandr --output VGA-1 --mode 1280x1024 --pos 3600x0 --rotate normal --output HDMI-2 --off --output HDMI-1 --primary --mode 1920x1080 --pos 1680x0 --rotate normal --output DP-1 --off --output DP-2 --mode 1680x1050 --pos 0x0 --rotate normal
+exec compton -f
 
 # launch software on startup
-#exec code /home/markgaze/git/emisgroup/ui-kit
+exec franz
+exec google-chrome
+
+# windows specific commands
+for_window [class="VirtualBox"] floating enable
+
+# run the merge
+exec xrdb -merge $HOME/.Xresources
