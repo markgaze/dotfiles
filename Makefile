@@ -13,9 +13,11 @@ bashfiles:
 	.bash_aliases \
 	.bash_profile \
 	.bash_prompt \
+	.bashrc \
 	.exports \
 	.gitconfig \
 	.dockerfunc \
+	.Xresources \
 	; \
 	do \
 		echo $$file; \
