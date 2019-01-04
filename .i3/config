@@ -177,6 +177,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
         status_command $barcmd --config ~/.config/i3/status.conf
         tray_output primary
+        position top
         colors {
 		background $bg-color
 	    	separator #757575
