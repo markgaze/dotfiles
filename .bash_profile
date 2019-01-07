@@ -13,7 +13,7 @@ fi
 
 
 
-for file in ~/.{bash_aliases,bash_prompt,exports,dockerfunc}; do
+for file in ~/.{bash_aliases,bash_prompt,exports,dockerfunc,*func}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck disable=SC1090
 		source "$file"
