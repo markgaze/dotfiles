@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
 
 " view settings
+set background=dark
 colorscheme codedark
 set noerrorbells
 set number
@@ -45,4 +46,7 @@ filetype on
 
 " airline settings
 let g:airline_theme = 'codedark'
+
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
