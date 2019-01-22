@@ -1,4 +1,21 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-sensible'
+Plug 'tomasiser/vim-code-dark'
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+call plug#end()
+
 " view settings
+colorscheme codedark
 set noerrorbells
 set number
 set showmode
@@ -25,4 +42,7 @@ endif
 
 " enable filetype detection:
 filetype on
+
+" airline settings
+let g:airline_theme = 'codedark'
 
