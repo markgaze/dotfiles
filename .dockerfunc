@@ -53,6 +53,13 @@ franz(){
 		markgaze/franz
 }
 
+lpass(){
+	docker run --rm -it \
+		-v "${HOME}/.lpass:/root/.lpass" \
+		--name lpass \
+		jessfraz/lpass "$@"
+}
+
 sqlectron(){
 	docker rm -f sqlectron
 
@@ -129,3 +136,4 @@ vscode-go-lambda(){
 		--name vscode-go-lambda \
 		markgaze/vscode:go-lambda
 }
+
