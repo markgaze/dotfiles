@@ -7,8 +7,10 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sensible'
 Plug 'tomasiser/vim-code-dark'
+Plug 'airblade/vim-gitgutter'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -49,4 +51,11 @@ let g:airline_theme = 'codedark'
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
+
+" Nerdtree settings
+nmap <C-n> :NERDTreeToggle<CR>
+
+let NERDTreeShowHidden=1
+
+let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store']
 
