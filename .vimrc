@@ -92,3 +92,7 @@ let g:fzf_colors =
 
 map ; :Files<CR>
 
+" Override colors
+hi Search ctermbg=LightYellow ctermfg=Black
+hi IncSearch ctermbg=White ctermfg=Black
+
