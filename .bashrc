@@ -20,3 +20,7 @@ for file in ~/.{bash_aliases,bash_prompt,exports,dockerfunc,*func}; do
 	fi
 done
 unset file
+
+# shellcheck disable=SC1090
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
