@@ -114,7 +114,7 @@ else
 fi;
 
 # Highlight the hostname when connected via SSH.
-if [[ "${SSH_TTY}" ]]; then
+if [[ -n "${SSH_TTY}" ]]; then
 	hostStyle="${bold}${cyan}";
 else
 	hostStyle="${cyan}";

@@ -18,6 +18,7 @@ bashfiles:
 	.gitconfig \
 	.dockerfunc \
 	.Xresources \
+	.vimrc \
 	; \
 	do \
 		echo $$file; \
