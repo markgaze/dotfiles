@@ -52,3 +52,5 @@ alias vtop="vtop --theme brew"
 # Quick folders
 alias work="cd ~/git/emisgroup"
 alias mine="cd ~/git/markgaze"
+
+alias nt="( urxvt & ) &>/dev/null"
