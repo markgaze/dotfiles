@@ -27,9 +27,11 @@
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
   rhh = reset HEAD --hard
   # from https://dev.to/nickytonline/my-git-aliases-5dea
+  a = add .
   colast = checkout -
   last = log -1 HEAD
   lop = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --no-merges
+  pf = push --force-with-lease
   pr = pull --rebase
   ra = rebase --abort
   rc = rebase --continue
