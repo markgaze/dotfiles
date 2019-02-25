@@ -26,6 +26,13 @@
   alias=!git config -l | grep ^alias | cut -c 7- | sort
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
   rhh = reset HEAD --hard
+  # from https://dev.to/nickytonline/my-git-aliases-5dea
+  colast = checkout -
+  last = log -1 HEAD
+  pr = pull --rebase
+  ra = rebase --abort
+  rc = rebase --continue
+  stashes = stash list
 [user]
 	email = mark.l.gaze@gmail.com
 	name = markgaze
