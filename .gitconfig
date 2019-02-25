@@ -29,6 +29,7 @@
   # from https://dev.to/nickytonline/my-git-aliases-5dea
   colast = checkout -
   last = log -1 HEAD
+  lop = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --no-merges
   pr = pull --rebase
   ra = rebase --abort
   rc = rebase --continue
