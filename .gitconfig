@@ -34,6 +34,9 @@
   ra = rebase --abort
   rc = rebase --continue
   stashes = stash list
+  # from benmatselby
+  lol = log --graph --decorate --color --date=iso
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [user]
 	email = mark.l.gaze@gmail.com
 	name = markgaze
