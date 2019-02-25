@@ -121,6 +121,10 @@ else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
 " Limit length of gitcommit messages
 au FileType gitcommit set tw=72
 
