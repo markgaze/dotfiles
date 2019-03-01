@@ -211,7 +211,7 @@ assign [class="Google-chrome"] $workspace1
 assign [class="Franz"] $workspace3
 
 # auto run commands
-exec_always --no-startup-id feh --bg-fill ${HOME}/Pictures/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ./wallpaper/wallpaper.png
 exec_always --no-startup-id xrandr --output VGA-1 --mode 1280x1024 --pos 3600x0 --rotate normal --output HDMI-2 --off --output HDMI-1 --primary --mode 1920x1080 --pos 1680x0 --rotate normal --output DP-1 --off --output DP-2 --mode 1680x1050 --pos 0x0 --rotate normal
 exec --no-startup-id compton -f
 

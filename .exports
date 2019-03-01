@@ -3,4 +3,6 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 export GIT_EDITOR=vim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/.jx/bin
+export PATH=$HOME/bin:$PATH
 
