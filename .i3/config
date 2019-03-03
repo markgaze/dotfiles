@@ -134,7 +134,7 @@ bindsym $mod+Shift+comma move workspace to left
 bindsym $mod+Shift+period move workspace to right
 
 # screenshots
-bindsym Print exec screenshot-tool
+bindsym Print exec "flameshot gui"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
