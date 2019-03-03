@@ -46,6 +46,7 @@ bindsym $mod+d exec $menu
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+l exec dm-tool switch-to-greeter
 
 # change focus
