@@ -2,7 +2,7 @@ HOME ?= `$HOME`
 PWD ?= `pwd`
 
 .PHONY: provision
-provision: bashfiles setup-git-config
+provision: bashfiles i3files backgrounds setup-git-config
 
 .PHONY: bashfiles
 bashfiles:
@@ -24,6 +24,23 @@ bashfiles:
 		echo $$file; \
 		ln -sf $(PWD)/$$file $(HOME)/$$file; \
 	done
+
+.PHONY: i3files
+i3files:
+	@echo '##'
+	@echo '# Symlink the i3 files in'
+	@echo '##'
+	if [ ! -d "$(HOME)/.i3" ]; then mkdir $(HOME)/.i3/; fi
+	ln -sf $(PWD)/.i3/config $(HOME)/.i3/config
+	ln -sf $(PWD)/.i3/status.conf $(HOME)/.i3/status.conf
+
+.PHONY: backgrounds
+backgrounds:
+	@echo '##'
+	@echo '# Copy backgrounds'
+	@echo '##'
+	if [ ! -d "$(HOME)/backgrounds" ]; then mkdir $(HOME)/backgrounds/; fi
+	cp backgrounds/* $(HOME)/backgrounds/
 
 .PHONY: setup-git-config
 setup-git-config:

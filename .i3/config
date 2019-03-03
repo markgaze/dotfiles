@@ -11,7 +11,7 @@
 
 set $mod Mod4
 set $term urxvt
-set $menu ulauncher
+set $menu rofi -show run -theme Adapta-Nokto
 set $barcmd i3status
 set $lockcmd i3lock
 
@@ -200,7 +200,7 @@ bar {
 # thin borders
 hide_edge_borders both
 
-# workspace default monitors
+# workspace default monitors for work
 workspace $workspace1 output DP-2
 workspace $workspace2 output HDMI-1
 workspace $workspace3 output VGA-1
@@ -211,7 +211,10 @@ assign [class="Google-chrome"] $workspace1
 assign [class="Franz"] $workspace3
 
 # auto run commands
-exec_always --no-startup-id feh --bg-fill ./wallpaper/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ~/backgrounds/wallpaper.png
+# VirtualBox
+# exec_always --no-startup-id xrandr --output Virtual1 --mode 1280x768 --pos 0x0 --rotate normal
+# Work
 exec_always --no-startup-id xrandr --output VGA-1 --mode 1280x1024 --pos 3600x0 --rotate normal --output HDMI-2 --off --output HDMI-1 --primary --mode 1920x1080 --pos 1680x0 --rotate normal --output DP-1 --off --output DP-2 --mode 1680x1050 --pos 0x0 --rotate normal
 exec --no-startup-id compton -f
 
@@ -222,7 +225,6 @@ exec google-chrome
 # windows specific commands
 for_window [class="VirtualBox"] floating enable
 for_window [class="^.*"] border pixel 1
-for_window [class="Ulauncher"] border pixel 0
 
 # run the merge
 exec xrdb -merge $HOME/.Xresources
