@@ -49,6 +49,12 @@ bindsym $mod+d exec $menu
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+l exec dm-tool switch-to-greeter
 
+# launch categorized menu
+bindsym $mod+z exec --no-startup-id morc_menu
+
+exec --no-startup-id volumeicon
+bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+
 # change focus
 #bindsym $mod+j focus left
 #bindsym $mod+k focus down
