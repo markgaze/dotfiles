@@ -92,6 +92,8 @@ Xft.hintstyle:  hintfull
 Xft.hinting:    1
 Xft.antialias:  1
 
+Xcursor.theme: neutral
+
 ! -- Fonts -- !
 URxvt.font: xft:Cousine:pixelsize=12:antialias=true:hinting=full,xft:Symbola:pixelsize=12:antialias=true:hinting=full
 URxvt.boldFont: xft:Cousine:style=bold:pixelsize=12:antialias=true:hinting=full,xft:Symbola:style=bold:pixelsize=12:antialias=true:hinting=full
