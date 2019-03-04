@@ -241,7 +241,7 @@ exec_always --no-startup-id feh --bg-fill ~/backgrounds/wallpaper.png
 # VirtualBox
 # exec_always --no-startup-id xrandr --output Virtual1 --mode 1280x768 --pos 0x0 --rotate normal
 # Work
-exec_always --no-startup-id xrandr --output VGA-1 --mode 1280x1024 --pos 3600x0 --rotate normal --output HDMI-2 --off --output HDMI-1 --primary --mode 1920x1080 --pos 1680x0 --rotate normal --output DP-1 --off --output DP-2 --mode 1680x1050 --pos 0x0 --rotate normal
+exec_always --no-startup-id xrandr --output VIRTUAL1 --off --output DP2 --mode 1680x1050 --pos 0x0 --rotate normal --output DP1 --off --output HDMI2 --off --output HDMI1 --mode 1920x1080 --pos 1680x0 --rotate normal --output VGA1 --mode 1280x1024 --pos 3600x0 --rotate normal
 exec --no-startup-id compton -f
 
 # launch software on startup
