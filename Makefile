@@ -16,6 +16,7 @@ bashfiles:
 	.bashrc \
 	.exports \
 	.gitconfig \
+	.helperfunc \
 	.dockerfunc \
 	.Xresources \
 	.vimrc \
