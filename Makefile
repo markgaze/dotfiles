@@ -2,7 +2,7 @@ HOME ?= `$HOME`
 PWD ?= `pwd`
 
 .PHONY: provision
-provision: bashfiles i3files backgrounds setup-git-config
+provision: bashfiles i3files polybarfiles backgrounds setup-git-config
 
 .PHONY: bashfiles
 bashfiles:
@@ -33,6 +33,15 @@ i3files:
 	if [ ! -d "$(HOME)/.i3" ]; then mkdir $(HOME)/.i3/; fi
 	ln -sf $(PWD)/.i3/config $(HOME)/.i3/config
 	ln -sf $(PWD)/.i3/status.conf $(HOME)/.i3/status.conf
+
+.PHONY: polybarfiles
+polybarfiles:
+	@echo '##'
+	@echo '# Symlink the Polybar files in'
+	@echo '##'
+	if [ ! -d "$(HOME)/.config/polybar" ]; then mkdir $(HOME)/.config/polybar/; fi
+	ln -sf $(PWD)/.config/polybar/config $(HOME)/.config/polybar/config
+	ln -sf $(PWD)/.config/polybar/launch.sh $(HOME)/.config/polybar/launch.sh
 
 .PHONY: backgrounds
 backgrounds:
