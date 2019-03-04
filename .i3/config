@@ -247,10 +247,10 @@ exec_always --no-startup-id feh --bg-fill ~/backgrounds/wallpaper.png
 # Work
 exec_always --no-startup-id xrandr --output VIRTUAL1 --off --output DP2 --mode 1680x1050 --pos 0x0 --rotate normal --output DP1 --off --output HDMI2 --off --output HDMI1 --mode 1920x1080 --pos 1680x0 --rotate normal --output VGA1 --mode 1280x1024 --pos 3600x0 --rotate normal
 exec --no-startup-id compton -f
+exec_always --no-startup-id killall dunst
 
 # launch software on startup
-exec franz
-exec google-chrome
+exec google-chrome-stable
 
 # windows specific commands
 for_window [class="VirtualBox"] floating enable
