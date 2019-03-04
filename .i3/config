@@ -251,6 +251,8 @@ exec_always --no-startup-id xrandr --output VIRTUAL1 --off --output DP2 --mode 1
 exec --no-startup-id compton -f
 exec_always --no-startup-id killall dunst
 
+bindsym $mod+F3 exec ~/appimages/franz.appimage
+
 # launch software on startup
 exec google-chrome-stable
 
