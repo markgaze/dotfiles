@@ -40,9 +40,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = ypn envypn:size=10;2
-font-1 = siji:pixelsize=10;2
-font-2 = termsynu:size=8;2
+font-0 = Arimo:Bold:size=9;2
 
 modules-left = bspwm i3
 ;modules-center = mpd
