@@ -42,10 +42,10 @@ module-margin-right = 2
 
 font-0 = Arimo:Bold:size=9;2
 
-modules-left = bspwm i3
+modules-left = date bspwm i3
 ;modules-center = mpd
-modules-center = 
-modules-right = xbacklight volume wifi battery memory cpu date
+modules-center = time
+modules-right = xbacklight volume wifi battery memory cpu
 
 tray-position = right
 tray-padding = 4
@@ -248,10 +248,16 @@ label-connected = %local_ip%
 
 [module/date]
 type = internal/date
-label = %{F#666}%{F-} %date%  %{F#e60053}%{F-} %time%
-date = %Y-%m-%d
-time = %H:%M
-interval = 5
+label = %date%
+date = %d %B %Y
+interval = 1
+label-padding = 2
+
+[module/time]
+type = internal/date
+label = %time%
+time = %H:%M:%S
+interval = 1
 
 [module/xbacklight]
 type = internal/xbacklight
