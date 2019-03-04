@@ -46,7 +46,7 @@ font-2 = termsynu:size=8;2
 
 modules-left = bspwm i3
 ;modules-center = mpd
-modules-center = xwindow
+modules-center = 
 modules-right = xbacklight volume wifi battery memory cpu date
 
 tray-position = right
