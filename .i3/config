@@ -11,7 +11,8 @@
 
 set $mod Mod4
 set $term urxvt
-set $menu rofi -show run -theme Adapta-Nokto
+set $menu rofi -show drun
+set $menu2 rofi -show run
 set $barcmd i3status
 set $lockcmd i3lock
 
@@ -41,6 +42,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec $menu
+bindsym $mod+Shift+d exec $menu2
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -55,7 +57,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
-bindsym $mod+Tab exec "rofi -show window -theme Adapta-Nokto"
+bindsym $mod+Tab exec "rofi -show window"
 
 bindsym $mod+Ctrl+x exec xrdb -merge $HOME/.Xresources
 

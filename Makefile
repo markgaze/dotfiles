@@ -45,6 +45,8 @@ configfiles:
 	ln -sf $(PWD)/.config/polybar/launch.sh $(HOME)/.config/polybar/launch.sh
 	if [ ! -d "$(HOME)/.config/dunst" ]; then mkdir $(HOME)/.config/dunst/; fi
 	ln -sf $(PWD)/.config/dunst/dunstrc $(HOME)/.config/dunst/dunstrc
+	if [ ! -d "$(HOME)/.config/rofi" ]; then mkdir $(HOME)/.config/rofi/; fi
+	ln -sf $(PWD)/.config/rofi/config $(HOME)/.config/rofi/config
 
 .PHONY: backgrounds
 backgrounds:
