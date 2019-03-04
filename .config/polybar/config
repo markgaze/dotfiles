@@ -45,7 +45,7 @@ font-0 = Arimo:Bold:size=9;2
 modules-left = date bspwm i3
 ;modules-center = mpd
 modules-center = time
-modules-right = xbacklight volume wifi battery cpu memory
+modules-right = xbacklight volume battery cpu memory wired
 
 tray-position = right
 tray-padding = 4
@@ -233,10 +233,10 @@ ramp-signal-foreground = #666
 
 [module/wired]
 type = internal/network
-interface = net0
+interface = eno1
 interval = 3.0
 
-format-connected-prefix = " "
+format-connected-prefix = "IP: "
 format-connected-prefix-foreground = #666
 label-connected = %local_ip%
 
