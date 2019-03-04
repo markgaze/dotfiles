@@ -57,6 +57,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 bindsym $mod+Tab exec "rofi -show window -theme Adapta-Nokto"
 
+bindsym $mod+Ctrl+x exec xrdb -merge $HOME/.Xresources
+
 # change focus
 #bindsym $mod+j focus left
 #bindsym $mod+k focus down
