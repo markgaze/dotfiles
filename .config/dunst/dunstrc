@@ -1,6 +1,6 @@
 [frame]
-    width = 0
-    color = "#212121"
+    width = 1
+    color = "#555555"
 
 [urgency_low]
     background = "#111111"
