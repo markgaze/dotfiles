@@ -83,3 +83,12 @@
 
     # Context menu
     # context = ctrl+shift+period
+
+[slack]
+    appname = Franz
+    summary = "*New message from*"
+    format = "<b>%s</b>"
+
+[volume]
+    summary = "*Volume Icon*"
+    timeout = 1
