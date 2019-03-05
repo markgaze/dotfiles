@@ -255,7 +255,7 @@ bindsym $mod+F3 exec ~/appimages/franz.appimage
 
 # launch software on startup
 exec google-chrome-stable
-exec_always --no-startup-id "killall conky && conky -c ~/.config/conky/config"
+exec_always --no-startup-id "(killall conky || echo 'Conky not running') && conky -c ~/.config/conky/config"
 
 # windows specific commands
 for_window [class="VirtualBox"] floating enable
