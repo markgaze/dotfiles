@@ -255,6 +255,8 @@ ramp-1 = 
 ramp-2 = 
 ramp-foreground = #666
 label-foreground = ${root.foreground}
+format-prefix = "Light: "
+format-foreground = #666
 
 [module/volume]
 type = internal/volume
