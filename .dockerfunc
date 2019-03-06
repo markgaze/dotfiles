@@ -137,3 +137,25 @@ vscode-go-lambda(){
 		markgaze/vscode:go-lambda
 }
 
+mopidy() {
+	local state
+	state=$(docker inspect --format "{{.State.Running}}" mopidy 2>/dev/null)
+	if [[ "$state" == "true" ]] && [[ "$*" != "" ]]; then
+		return 0
+	fi
+
+	docker run -d \
+		--user root \
+		--device /dev/snd \
+		--device /dev/dri \
+		-v /home/markgaze/.config/mopidy/mopidy.conf:/var/lib/mopidy/.config/mopidy/mopidy.conf \
+		-v /etc/asound.conf:/etc/asound.conf \
+		-v /tmp/mpd.fifo:/tmp/mpd.fifo \
+		-p 6601:6600 \
+		-p 6680:6680 \
+		--user $UID:$GID \
+		--group-add "$(getent group audio | cut -d: -f3)" \
+		--name mopidy \
+		markgaze/mopidy:latest \
+		mopidy -o youtube/enabled=false
+}

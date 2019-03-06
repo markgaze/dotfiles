@@ -5,3 +5,8 @@ mkd() {
 	mkdir -p "$@"
 	cd "$@" || exit
 }
+
+music() {
+	mopidy
+	ncmpcpp -p 6601
+}

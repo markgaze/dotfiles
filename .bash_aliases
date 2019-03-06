@@ -55,4 +55,3 @@ alias mine="cd ~/git/markgaze"
 
 alias nt="( urxvt & ) &>/dev/null"
 alias weather="curl wttr.in"
-
