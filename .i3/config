@@ -51,6 +51,10 @@ bindsym $mod+u exec $uikmenu
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# backlight
+bindsym $mod+Shift+F2 exec xbacklight -dec 5
+bindsym $mod+Shift+F3 exec xbacklight -inc 5
+
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+l exec dm-tool switch-to-greeter
 
