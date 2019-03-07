@@ -50,6 +50,9 @@ configfiles:
 	ln -sf $(PWD)/.config/rofi/config $(HOME)/.config/rofi/config
 	if [ ! -d "$(HOME)/.config/conky" ]; then mkdir $(HOME)/.config/conky/; fi
 	ln -sf $(PWD)/.config/conky/config $(HOME)/.config/conky/config
+	if [ ! -d "$(HOME)/.config/mopidy" ]; then mkdir $(HOME)/.config/mopidy/; fi
+	ln -sf $(PWD)/.config/mopidy/mopidy.conf $(HOME)/.config/mopidy/mopidy.conf
+	sudo ln -sf $(PWD)/etc/asound.conf /etc/asound.conf
 
 .PHONY: backgrounds
 backgrounds:
