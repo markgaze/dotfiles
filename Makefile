@@ -34,6 +34,7 @@ i3files:
 	if [ ! -d "$(HOME)/.i3" ]; then mkdir $(HOME)/.i3/; fi
 	ln -sf $(PWD)/.i3/config $(HOME)/.i3/config
 	ln -sf $(PWD)/.i3/status.conf $(HOME)/.i3/status.conf
+	ln -sf $(PWD)/.i3/uik-menu.sh $(HOME)/.i3/uik-menu.sh
 
 .PHONY: configfiles
 configfiles:
@@ -76,4 +77,4 @@ endif
 
 .PHONY: test
 test:
-	shellcheck .bash_* .exports .dockerfunc
+	shellcheck .bash_* .exports .dockerfunc .i3/*.sh .config/polybar/*.sh
