@@ -61,6 +61,7 @@ configfiles:
 	if [ ! -d "$(HOME)/.calcurse/caldav" ]; then mkdir $(HOME)/.calcurse/caldav; fi
 	ln -sf $(PWD)/.calcurse/caldav/config $(HOME)/.calcurse/caldav/config
 	ln -sf $(PWD)/.config/betterlockscreenrc $(HOME)/.config/betterlockscreenrc
+	ln -sf $(PWD)/.config/compton.conf $(HOME)/.config/compton.conf
 
 .PHONY: backgrounds
 backgrounds:
