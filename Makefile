@@ -53,6 +53,8 @@ configfiles:
 	if [ ! -d "$(HOME)/.config/mopidy" ]; then mkdir $(HOME)/.config/mopidy/; fi
 	ln -sf $(PWD)/.config/mopidy/mopidy.conf $(HOME)/.config/mopidy/mopidy.conf
 	sudo ln -sf $(PWD)/etc/asound.conf /etc/asound.conf
+	if [ ! -d "$(HOME)/.devilspie" ]; then mkdir $(HOME)/.devilspie; fi
+	ln -sf $(PWD)/.devilspie/vscode.ds $(HOME)/.devilspie/vscode.ds
 
 .PHONY: backgrounds
 backgrounds:
