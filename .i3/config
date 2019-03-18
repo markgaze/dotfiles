@@ -14,7 +14,7 @@ set $term urxvt
 set $menu rofi -show drun
 set $menu2 rofi -show run
 set $barcmd i3status
-set $lockcmd i3lock
+set $lockcmd betterlockscreen -l blur
 set $mpc mpc -p 6601
 set $uikmenu ~/.i3/uik-menu.sh
 set $emojimenu ~/.i3/emoji-menu.sh
@@ -58,7 +58,7 @@ bindsym $mod+Shift+F2 exec xbacklight -dec 5
 bindsym $mod+Shift+F3 exec xbacklight -inc 5
 
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+l exec dm-tool switch-to-greeter
+bindsym $mod+l exec $lockcmd
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -273,6 +273,7 @@ bindsym $mod+F3 exec ~/appimages/franz.appimage
 exec google-chrome-stable
 exec_always --no-startup-id "(killall conky || echo 'Conky not running') && conky -c ~/.config/conky/config"
 exec_always --no-startup-id "(killall devilspie || echo 'Devilspie not running') && devilspie -a"
+exec --no-startup-id betterlockscreen -u ~/backgrounds/wallpaper.png
 
 # windows specific commands
 for_window [class="VirtualBox"] floating enable
