@@ -1,0 +1,13 @@
+[General]
+AuthMethod = oauth2
+DryRun = No
+Hostname = apidata.googleusercontent.com
+Path = /caldav/v2/#Email#/events/
+Scope = https://www.googleapis.com/auth/calendar
+SyncFilter = cal
+
+[OAuth2]
+ClientID = # ID
+ClientSecret = # Secret
+Scope = https://www.googleapis.com/auth/calendar
+RedirectURI = http://127.0.0.1

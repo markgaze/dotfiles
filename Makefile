@@ -55,6 +55,9 @@ configfiles:
 	sudo ln -sf $(PWD)/etc/asound.conf /etc/asound.conf
 	if [ ! -d "$(HOME)/.devilspie" ]; then mkdir $(HOME)/.devilspie; fi
 	ln -sf $(PWD)/.devilspie/vscode.ds $(HOME)/.devilspie/vscode.ds
+	if [ ! -d "$(HOME)/.calcurse" ]; then mkdir $(HOME)/.calcurse; fi
+	if [ ! -d "$(HOME)/.calcurse/caldav" ]; then mkdir $(HOME)/.calcurse/caldav; fi
+	ln -sf $(PWD)/.calcurse/caldav/config $(HOME)/.calcurse/caldav/config
 
 .PHONY: backgrounds
 backgrounds:
