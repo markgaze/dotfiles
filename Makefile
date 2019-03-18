@@ -35,6 +35,8 @@ i3files:
 	ln -sf $(PWD)/.i3/config $(HOME)/.i3/config
 	ln -sf $(PWD)/.i3/status.conf $(HOME)/.i3/status.conf
 	ln -sf $(PWD)/.i3/uik-menu.sh $(HOME)/.i3/uik-menu.sh
+	ln -sf $(PWD)/.i3/emoji-menu.sh $(HOME)/.i3/emoji-menu.sh
+	ln -sf $(PWD)/.i3/.emoji $(HOME)/.i3/.emoji
 
 .PHONY: configfiles
 configfiles:

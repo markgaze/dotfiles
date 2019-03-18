@@ -17,6 +17,7 @@ set $barcmd i3status
 set $lockcmd i3lock
 set $mpc mpc -p 6601
 set $uikmenu ~/.i3/uik-menu.sh
+set $emojimenu ~/.i3/emoji-menu.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,6 +47,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+d exec $menu2
 bindsym $mod+u exec $uikmenu
+bindsym $mod+Ctrl+e exec $emojimenu
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
