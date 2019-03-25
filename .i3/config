@@ -272,7 +272,7 @@ bindsym $mod+F3 exec ~/appimages/franz.appimage
 exec google-chrome-stable
 exec_always --no-startup-id "(killall conky || echo 'Conky not running') && conky -c ~/.config/conky/config"
 exec_always --no-startup-id "(killall devilspie || echo 'Devilspie not running') && devilspie -a"
-exec --no-startup-id betterlockscreen -u ~/backgrounds/wallpaper.png
+exec_always --no-startup-id betterlockscreen -u ~/backgrounds/lock_wallpaper.jpg
 
 # windows specific commands
 for_window [class="VirtualBox"] floating enable
