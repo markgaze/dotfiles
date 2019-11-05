@@ -9,3 +9,4 @@ export GOPATH=$HOME/go
 export PATH="$PATH:${GOPATH}/bin:${PATH}"
 
 export ANSIBLE_COW_SELECTION=random
+export BASH_SILENCE_DEPRECATION_WARNING=1

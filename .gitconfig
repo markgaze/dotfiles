@@ -18,6 +18,7 @@
   open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
   browse = !git open
   pom = pull origin master
+  pod = pull origin develop
   # from jessfraz https://github.com/jessfraz/dotfiles/blob/master/.gitconfig
   branches = branch -a
   s = status -s

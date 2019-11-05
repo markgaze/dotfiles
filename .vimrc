@@ -15,9 +15,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-
-" On-demand loading
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'mattn/emmet-vim'
+Plug 'Yggdroot/indentLine'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " view settings
