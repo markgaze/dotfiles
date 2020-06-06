@@ -20,6 +20,7 @@ bashfiles:
 	.dockerfunc \
 	.Xresources \
 	.vimrc \
+	.tmux.conf \
 	; \
 	do \
 		echo $$file; \
