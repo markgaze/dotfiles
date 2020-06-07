@@ -5,6 +5,7 @@
   f = fetch -p
   ec = config --global -e
   up = !git pull --rebase origin master
+  upd = !git pull --rebase origin develop
   cob = checkout -b
   cm = !git add -A && git commit -m        
   save = !git add -A && git commit -m 'SAVEPOINT'
@@ -13,7 +14,9 @@
   amend = commit -a --amend
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
   bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+  bcleand = "!f() { git branch --merged ${1-develop} | grep -v " ${1-develop}$" | xargs git branch -d; }; f"
   bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+  bdoned = "!f() { git checkout ${1-develop} && git upd && git bcleand ${1-develop}; }; f"
   migrate = "!f(){ CURRENT=$(git symbolic-ref --short HEAD); git checkout -b $1 && git branch --force $CURRENT ${3-'$CURRENT@{u}'} && git rebase --onto ${2-master} $CURRENT; }; f"
   open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
   browse = !git open
@@ -43,3 +46,5 @@
 [user]
 	email = mark.l.gaze@gmail.com
 	name = markgaze
+[help]
+	autocorrect = 50
