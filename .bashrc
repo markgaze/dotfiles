@@ -11,6 +11,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+. ~/.bash.d/cht.sh
+source ~/.bin/tmuxinator.bash
+
 for file in ~/.{bash_aliases,bash_prompt,exports,dockerfunc,*func}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck disable=SC1090
@@ -21,4 +24,3 @@ unset file
 
 # shellcheck disable=SC1090
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
