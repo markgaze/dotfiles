@@ -27,6 +27,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
+Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 call plug#end()
 
 set encoding=UTF-8
@@ -39,6 +40,7 @@ set number
 set showmode
 set showcmd
 set ruler
+let mapleader=","
 
 " search settings
 set incsearch
@@ -135,13 +137,13 @@ endfunction
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
-" set 80 character line limit
-" highlight ColorColumn ctermbg=Gray
-" if exists('+colorcolumn')
-"  set colorcolumn=80
-" else
-"  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-" endif
+" set 120 character line limit
+highlight ColorColumn ctermbg=Gray
+if exists('+colorcolumn')
+ set colorcolumn=120
+else
+ au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
+endif
 
 set wrap
 "set textwidth=79
