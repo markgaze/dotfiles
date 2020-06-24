@@ -28,6 +28,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
+Plug 'skanehira/preview-markdown.vim'
 call plug#end()
 
 set encoding=UTF-8
@@ -40,13 +41,14 @@ set number
 set showmode
 set showcmd
 set ruler
-let mapleader=","
+set relativenumber
 
 " search settings
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set splitright
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
@@ -304,3 +306,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+let g:preview_markdown_parser = 'glow'
+let g:preview_markdown_vertical = 1
+let g:preview_markdown_auto_update = 1
+nmap <C-m> :PreviewMarkdown<CR>
