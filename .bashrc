@@ -11,14 +11,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. ~/.bash.d/cht.sh
-source ~/.bin/tmuxinator.bash
+# shellcheck disable=SC1090
+[ -f ~/.bash.d/cht.sh ] && . ~/.bash.d/cht.sh
+
+# shellcheck disable=SC1090
+[ -f ~/.bin/tmuxinator.bash ] && source ~/.bin/tmuxinator.bash
 
 for file in ~/.{bash_aliases,bash_prompt,exports,dockerfunc,*func}; do
-	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
-		# shellcheck disable=SC1090
-		source "$file"
-	fi
+  if [[ -r "$file" ]] && [[ -f "$file" ]]; then
+    # shellcheck disable=SC1090
+    source "$file"
+  fi
 done
 unset file
 
