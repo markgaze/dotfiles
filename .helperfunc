@@ -2,19 +2,11 @@
 
 # Create a new directory and enter it
 mkd() {
-	mkdir -p "$@"
-	cd "$@" || exit
+  mkdir -p "$@"
+  cd "$@" || exit
 }
 
-music() {
-	mopidy
-	ncmpcpp -p 6601
-}
-
-stop-mopidy() {
-	docker rm -f mopidy
-}
-
+# Fix my keyboard on Mac
 fix-keyboard() {
   hidutil property --set '{"UserKeyMapping":[]}'
   hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035},{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000064}]}'
