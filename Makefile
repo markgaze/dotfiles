@@ -3,4 +3,4 @@ PWD ?= `pwd`
 
 .PHONY: test
 test:
-  shellcheck .aliases .bash_* .exports .*_functions
+	shellcheck .aliases .bash_* .exports .*_functions
