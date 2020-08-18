@@ -6,9 +6,10 @@ RUN apk --update add \
   curl \
   fzf \
   git \
+  tmux \
   vim
 
-RUN addgroup -S mg && adduser -S markgaze -G mg
+RUN adduser -G root --shell /bin/bash -S markgaze 
 
 USER markgaze
 
