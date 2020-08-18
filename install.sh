@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo "Installing dotfiles..."
+source helpers/symlink.sh
 
+echo "Installing dotfiles..."
 source install/dotfiles.sh
 
 # perform macOS-specific install
