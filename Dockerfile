@@ -8,4 +8,8 @@ RUN apk --update add \
   git \
   vim
 
-COPY . /root
+RUN addgroup -S mg && adduser -S markgaze -G mg
+
+COPY . /home/markgaze
+
+USER markgaze
