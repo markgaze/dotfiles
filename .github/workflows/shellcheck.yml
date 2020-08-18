@@ -11,5 +11,5 @@ jobs:
 
     - name: Run Shellcheck
       run: |
-        make test
+        npm run vet
 

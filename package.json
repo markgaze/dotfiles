@@ -1,0 +1,27 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "My configuration dotfiles",
+  "scripts": {
+    "vet": "shellcheck .aliases .bash_* .exports .*_functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markgaze/dotfiles.git"
+  },
+  "author": "markgaze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markgaze/dotfiles/issues"
+  },
+  "homepage": "https://github.com/markgaze/dotfiles#readme",
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "shellcheck": "^0.4.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run vet"
+    }
+  }
+}
