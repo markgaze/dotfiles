@@ -5,7 +5,9 @@
   "scripts": {
     "build:docker": "docker build -t dotfiles-test .",
     "start": "npm run build:docker && docker run -it --rm --name dotfiles-test dotfiles-test bash",
-    "vet": "shellcheck bash/.bashrc bash/.bash_profile bash/.bash_prompt common/.aliases common/.exports common/.*_functions install/*.sh install.sh"
+    "shellcheck": "shellcheck bash/.bashrc bash/.bash_profile bash/.bash_prompt common/.aliases common/.exports common/.*_functions install/*.sh install.sh",
+    "vet": "npm run shellcheck && npm run vimlint",
+    "vimlint": "vimlint vim/.vimrc"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   "homepage": "https://github.com/markgaze/dotfiles#readme",
   "devDependencies": {
     "husky": "^4.2.5",
-    "shellcheck": "^0.4.4"
+    "shellcheck": "^0.4.4",
+    "vimlint": "^0.2.5"
   },
   "husky": {
     "hooks": {
