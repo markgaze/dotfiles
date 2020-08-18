@@ -6,6 +6,7 @@ RUN apk --update add \
   curl \
   fzf \
   git \
+  less \
   tmux \
   vim
 
