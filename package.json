@@ -5,7 +5,7 @@
   "scripts": {
     "build:docker": "docker build -t dotfiles-test .",
     "start": "npm run build:docker && docker run -it --rm --name dotfiles-test dotfiles-test bash",
-    "vet": "shellcheck .aliases .bash_* .exports .*_functions"
+    "vet": "shellcheck bash/.bashrc bash/.bash_profile bash/.bash_prompt common/.aliases common/.exports common/.*_functions install/*.sh install.sh"
   },
   "repository": {
     "type": "git",
