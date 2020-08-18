@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "My configuration dotfiles",
   "scripts": {
+    "build:docker": "docker build -t dotfiles-test .",
+    "start": "npm run build:docker && docker run -it --rm --name dotfiles-test dotfiles-test bash",
     "vet": "shellcheck .aliases .bash_* .exports .*_functions"
   },
   "repository": {

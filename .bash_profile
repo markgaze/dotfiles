@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Bash scripts to load
+# Add tab completion
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     # shellcheck disable=SC1091
@@ -11,16 +11,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# shellcheck disable=SC1090
+[ -f ~/.bash.d/cht.sh ] && . ~/.bash.d/cht.sh
 
+# shellcheck disable=SC1090
+[ -f ~/.bin/tmuxinator.bash ] && source ~/.bin/tmuxinator.bash
 
-for file in ~/.{bash_aliases,bash_prompt,exports,dockerfunc,*func}; do
-	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
-		# shellcheck disable=SC1090
-		source "$file"
-	fi
+# Bash scripts to load
+for file in ~/.{aliases,bash_prompt,exports,*_functions}; do
+  # shellcheck disable=SC1090
+  [[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
 done
-unset file
+unset file;
 
 # shellcheck disable=SC1090
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-

@@ -5,5 +5,3 @@ export GIT_EDITOR=vim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 export PATH=$HOME/bin:$PATH
-
-export ANSIBLE_COW_SELECTION=random
