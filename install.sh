@@ -8,4 +8,5 @@ source install/dotfiles.sh
 # perform macOS-specific install
 if [ "$(uname)" == "Darwin" ]; then
   echo -e "\\n\\nRunning on macOS..."
+  symlink_files 'os-specific/macos' '.*'
 fi

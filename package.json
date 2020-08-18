@@ -5,7 +5,7 @@
   "scripts": {
     "build:docker": "docker build -t dotfiles-test .",
     "start": "npm run build:docker && docker run -it --rm --name dotfiles-test dotfiles-test bash",
-    "shellcheck": "shellcheck bash/.bashrc bash/.bash_profile bash/.bash_prompt common/.aliases common/.exports **/.*_functions install/*.sh helpers/*.sh install.sh",
+    "shellcheck": "shellcheck bash/.bashrc bash/.bash_profile bash/.bash_prompt common/.aliases common/.exports os-specific/**/.*_functions **/.*_functions install/*.sh helpers/*.sh install.sh",
     "vet": "npm run shellcheck && npm run vimlint",
     "vimlint": "vimlint vim/.vimrc"
   },
