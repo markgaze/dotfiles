@@ -1,5 +1,3 @@
-[include]
-  path = ~/.gitconfig.local
 [alias]
   co = checkout
   f = fetch -p

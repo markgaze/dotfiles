@@ -10,6 +10,13 @@ RUN apk --update add \
 
 RUN addgroup -S mg && adduser -S markgaze -G mg
 
+USER markgaze
+
 COPY . /home/markgaze
 
-USER markgaze
+# Create a directory to test git
+RUN mkdir /home/markgaze/git \
+  && mkdir /home/markgaze/git/markgaze && \
+  mkdir /home/markgaze/git/markgaze/test && \
+  cd /home/markgaze/git/markgaze/test && \
+  git init
