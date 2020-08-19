@@ -6,6 +6,7 @@ RUN apk --update add \
   curl \
   git \
   less \
+  ncurses \
   perl \
   tmux \
   vim
